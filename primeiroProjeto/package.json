@@ -1,0 +1,13 @@
+{
+  "name": "primeiroprojeto",
+  "version": "1.0.0",
+  "main": "./src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "open": "echo \"Hello world\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Rhuan Kowic",
+  "license": "ISC",
+  "description": "My first project"
+}

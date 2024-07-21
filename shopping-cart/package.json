@@ -8,5 +8,6 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": "Projeto de carrinho de compras da shoppe"
+  "description": "Projeto de carrinho de compras da shoppe",
+  "type": "module"
 }

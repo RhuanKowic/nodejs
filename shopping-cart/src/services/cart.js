@@ -1,16 +1,30 @@
 async function addItem(userCart, item) {
-  userCart.push(item)
+  userCart.push(item);
 }
 
 async function deleteItem(userCart, nameItem) {
   const index = userCart.findIndex((item) => item.name === nameItem);
   if(index !== -1){
-    userCart.splice(index, 1)
+    userCart.splice(index, 1);
   }
 }
 
-async function removeItem(userCart, id) {
+async function removeItem(userCart, item) {
+  const indexFound = userCart.findIndex((product) => product.name === item.name)
+  if (indexFound == -1){
+    console.log("Item não encontrado");
+    return;
+  }
 
+  if(userCart[indexFound].quantity > 1){
+    userCart[indexFound].quantity -= 1;
+    return;
+  }
+
+  if (userCart[indexFound].quantity === 1) {
+    userCart.splice(indexFound, 1);
+    return;
+  }
 }
 
 async function calculateTotal(userCart) {

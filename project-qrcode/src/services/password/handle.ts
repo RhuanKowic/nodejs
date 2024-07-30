@@ -19,7 +19,7 @@ const handle = async () => {
   let characters = await permittedCharacters();
   let password = "";
 
-  const passwordLength = process.env.PASSWORD_LENGTH;
+  const passwordLength : number = (process.env.PASSWORD_LENGTH != undefined) ? parseInt(process.env.PASSWORD_LENGTH) : 8;
 
   for (let i = 0; i < passwordLength; i++) {
     const index = Math.floor(Math.random() * characters.length);

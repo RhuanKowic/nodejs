@@ -1,6 +1,6 @@
 import chalk from "chalk";
 import qr from "qrcode-terminal";
-const handle = async (err, res) => {
+const handle = async (err : any, res : any) => {
   if (err) {
     console.log("Error on application");
     return;
